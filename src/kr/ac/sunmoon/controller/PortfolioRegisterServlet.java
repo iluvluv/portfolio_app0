@@ -57,7 +57,7 @@ public class PortfolioRegisterServlet extends HttpServlet {
 		 		String realFileName = mRequest.getFilesystemName(name);
 		 		list.add(new PortfolioData(originalFileName,realFileName));
 		 	}
-		 	p.setDatalist(list);
+		 	p.setDataList(list);
 		 	
 		 	PortfolioService pService = new PortfolioService();
 		 	pService.register(p);

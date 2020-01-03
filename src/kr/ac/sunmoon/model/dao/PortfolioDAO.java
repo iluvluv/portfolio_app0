@@ -59,7 +59,7 @@ public class PortfolioDAO {
 		Connection con = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-		String sql = "select no, original_file,real_file_name "
+		String sql = "select no, original_file_name,real_file_name "
 				+"from portfolio_data "
 				+"where portfolio_no = ?";
 		ArrayList<PortfolioData> list = new ArrayList<PortfolioData>();
@@ -91,7 +91,7 @@ public class PortfolioDAO {
 			stmt.setInt(1, no);
 			rs = stmt.executeQuery();
 			if (rs.next()) {
-				p = new Portfolio(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(5), rs.getString(6), rs.getString(7), 0);
+				p = new Portfolio(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), 0);
 			}
 			
 		} finally {

@@ -12,9 +12,9 @@ public class PortfolioService {
 	
 	public void register(Portfolio p) throws Exception {
 		int no = pDao.insert(p);
-		ArrayList<PortfolioData> list = p.getDatalist();
+		ArrayList<PortfolioData> list = p.getDataList();
 		if(list != null && list.size()>0) {
-			pDao.insert(no,p.getDatalist());
+			pDao.insert(no,p.getDataList());
 		}
 		
 	}
@@ -28,7 +28,7 @@ public class PortfolioService {
 	}
 	public Portfolio getDetail(int no) throws Exception {
 		Portfolio p =pDao.select(no);
-		p.setDatalist(pDao.selectDataList(no));
+		p.setDataList(pDao.selectDataList(no));
 		return p;
 	}
 	public void modify(Portfolio p) throws Exception {

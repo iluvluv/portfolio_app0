@@ -12,7 +12,7 @@ public class Portfolio {
 	private String startDate;
 	private String endDate;
 	private String regDate;
-	private ArrayList<PortfolioData> datalist;
+	private ArrayList<PortfolioData> dataList;
 	private int dataCount;
 	private int memberCount;
 	
@@ -21,7 +21,7 @@ public class Portfolio {
 		this(title, leader, member, content, startDate, endDate);
 		this.no = no;
 		this.regDate = regDate;
-		this.dataCount = dataCount;
+		this.dataCount = datacount;
 	}
 	public Portfolio(String title, String leader, String member, String content, String startDate, String endDate) {
 		super();
@@ -82,11 +82,12 @@ public class Portfolio {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
-	public ArrayList<PortfolioData> getDatalist() {
-		return datalist;
+
+	public ArrayList<PortfolioData> getDataList() {
+		return dataList;
 	}
-	public void setDatalist(ArrayList<PortfolioData> datalist) {
-		this.datalist = datalist;
+	public void setDataList(ArrayList<PortfolioData> dataList) {
+		this.dataList = dataList;
 	}
 	public int getDataCount() {
 		return dataCount;
